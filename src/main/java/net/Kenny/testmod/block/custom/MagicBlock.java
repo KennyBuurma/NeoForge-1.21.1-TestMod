@@ -54,7 +54,7 @@ public class MagicBlock extends Block {
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.translatable("tooltip.tutorialmod.magic_block.tooltip"));
+        tooltipComponents.add(Component.translatable("tooltip.testmod.magic_block.tooltip"));
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
     }
 }

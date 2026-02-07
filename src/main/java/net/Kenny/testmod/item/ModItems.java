@@ -28,7 +28,7 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.RADISH)) {
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-                    tooltipComponents.add(Component.translatable("tooltip.tutorialmod.radish.tooltip"));
+                    tooltipComponents.add(Component.translatable("tooltip.testmod.radish.tooltip"));
                     super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
                 }
             });

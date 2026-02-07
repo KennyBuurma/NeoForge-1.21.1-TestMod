@@ -56,9 +56,9 @@ public class ChiselItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         if(Screen.hasShiftDown()) {
-            tooltipComponents.add(Component.translatable("tooltip.tutorialmod.chisel.shift_down"));
+            tooltipComponents.add(Component.translatable("tooltip.testmod.chisel.shift_down"));
         } else {
-            tooltipComponents.add(Component.translatable("tooltip.tutorialmod.chisel"));
+            tooltipComponents.add(Component.translatable("tooltip.testmod.chisel"));
         }
 
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
