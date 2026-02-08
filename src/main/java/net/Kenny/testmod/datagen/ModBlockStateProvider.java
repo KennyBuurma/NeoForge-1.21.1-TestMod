@@ -27,6 +27,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("testmod:block/" + deferredBlock.getId().getPath()));
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 }
