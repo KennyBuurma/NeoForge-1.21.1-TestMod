@@ -2,6 +2,8 @@
   "values": [
     "testmod:bismuth_block",
     "testmod:bismuth_ore",
-    "testmod:bismuth_deepslate_ore"
+    "testmod:bismuth_deepslate_ore",
+    "testmod:vermidium_ore",
+    "testmod:deepslate_vermidium_ore"
   ]
 }

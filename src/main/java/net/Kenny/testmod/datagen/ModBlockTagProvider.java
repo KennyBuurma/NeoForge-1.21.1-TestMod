@@ -21,10 +21,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.BISMUTH_BLOCK.get())
                 .add(ModBlocks.BISMUTH_ORE.get())
-                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
+                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get())
+                .add(ModBlocks.VERMIDIUM_ORE.get())
+                .add(ModBlocks.DEEPSLATE_VERMIDIUM_ORE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get());
+                .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get())
+                .add(ModBlocks.VERMIDIUM_ORE.get())
+                .add(ModBlocks.DEEPSLATE_VERMIDIUM_ORE.get());
 
     }
 }

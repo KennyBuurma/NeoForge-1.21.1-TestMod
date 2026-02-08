@@ -1,3 +1,3 @@
-// 1.21.1	2026-02-07T11:49:11.1640897	Tags for minecraft:block mod id testmod
-fe36c29bfccd6f74f1b43f1776b09d09451c6a4a data/minecraft/tags/block/mineable/pickaxe.json
-bfca744b57707fc5521c90bf147e2ce97cc369db data/minecraft/tags/block/needs_iron_tool.json
+// 1.21.1	2026-02-08T16:16:48.2235387	Tags for minecraft:block mod id testmod
+f7f78329251efa869afb84254e8bbd98af72416e data/minecraft/tags/block/mineable/pickaxe.json
+012a7a4af7174f56025efd9ddd24e28b5e81087b data/minecraft/tags/block/needs_iron_tool.json

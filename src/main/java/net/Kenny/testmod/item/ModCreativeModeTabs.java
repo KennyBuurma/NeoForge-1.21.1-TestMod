@@ -43,6 +43,14 @@ public class ModCreativeModeTabs {
 
                     }).build());
 
+    public static final Supplier<CreativeModeTab> VERMIDIUM_ITEMS_TAB = CREATIVE_MODE_TAB.register("vermidium_items_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.VERMIDIUM_ORE.get()))
+                    .title(Component.translatable("creativetab.testmod.vermidium_items"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.VERMIDIUM_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_VERMIDIUM_ORE);
+                    }).build());
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);
