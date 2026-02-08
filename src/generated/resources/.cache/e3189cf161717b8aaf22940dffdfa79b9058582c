@@ -1,13 +1,19 @@
-// 1.21.1	2026-02-07T11:49:11.1670903	Block States: testmod
+// 1.21.1	2026-02-08T15:57:17.2279888	Block States: testmod
 d36a6b13f3f8f366db5492f661893b57e31a0fe0 assets/testmod/blockstates/bismuth_block.json
 661f32e8b4ecbb3311b600b2f722c3d9502d0a4c assets/testmod/blockstates/bismuth_deepslate_ore.json
 2f21c7080ebf33aa2e8f4893c2bb6cd6d8334b50 assets/testmod/blockstates/bismuth_ore.json
+3a267edd1cf53e21c83f7939ad0759fcc2e0ab52 assets/testmod/blockstates/deepslate_vermidium_ore.json
 e74be35792306d17fb5b318ddd98e0a1affe5e47 assets/testmod/blockstates/magic_block.json
+4c520d1c8e7a4b2aad624a3298478cf415e7c48d assets/testmod/blockstates/vermidium_ore.json
 9f9490efe41b15036294fc3ba3506bae2102a8a4 assets/testmod/models/block/bismuth_block.json
 35d706ff47c33f8b8a7b2a3acfabf09e1eeac089 assets/testmod/models/block/bismuth_deepslate_ore.json
 489295ed96aeb94126875981a328e246335a4690 assets/testmod/models/block/bismuth_ore.json
+5f7fcd3cf694d348c6200d923cb05aecdad7d03e assets/testmod/models/block/deepslate_vermidium_ore.json
 9a06e54e22cd98054d399605ca2038951a99fa94 assets/testmod/models/block/magic_block.json
+be84cbb81dd615bacccc788f6823ca8ed67dc6ec assets/testmod/models/block/vermidium_ore.json
 91a12245684fdf8ad984358469a1738ac0564a92 assets/testmod/models/item/bismuth_block.json
 018a40de78ea4a07a9150ed20ad78c8c0609fdbe assets/testmod/models/item/bismuth_deepslate_ore.json
 76135aaaa1cefd0eee95cfe5687d6495f34a04b0 assets/testmod/models/item/bismuth_ore.json
+85cc84a6e817b98e5135465c05040717b9abe77d assets/testmod/models/item/deepslate_vermidium_ore.json
 c208ec43fa86882c5cf0cfffbc412e1c66dc6eba assets/testmod/models/item/magic_block.json
+122aeb8d6b67b041d121fc6f306b97f26556bfb4 assets/testmod/models/item/vermidium_ore.json

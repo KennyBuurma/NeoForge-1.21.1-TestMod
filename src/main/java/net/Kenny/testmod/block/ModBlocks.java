@@ -34,6 +34,13 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of().strength(2f).noLootTable()));
 
+    public static final DeferredBlock<Block> VERMIDIUM_ORE = registerBlock("vermidium_ore",
+            () -> new DropExperienceBlock(UniformInt.of(2, 7),
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> DEEPSLATE_VERMIDIUM_ORE = registerBlock("deepslate_vermidium_ore",
+            () -> new DropExperienceBlock(UniformInt.of(3, 8),
+                    BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

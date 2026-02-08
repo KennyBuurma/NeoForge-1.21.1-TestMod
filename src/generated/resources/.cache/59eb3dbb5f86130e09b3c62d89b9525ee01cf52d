@@ -1,4 +1,6 @@
-// 1.21.1	2026-02-07T11:49:11.16509	Loot Tables
+// 1.21.1	2026-02-08T15:57:17.2259881	Loot Tables
 dbe690507d3d031b0c29d6450f3b4affbe6c7464 data/testmod/loot_table/blocks/bismuth_block.json
 d99610556846c7f8d34b11efa57d193e25b7c2fa data/testmod/loot_table/blocks/bismuth_deepslate_ore.json
 9cdecc49f931e0841369eaa0fc77137f9c653030 data/testmod/loot_table/blocks/bismuth_ore.json
+6820b8673138e901f1954b69d096c47474ffee8b data/testmod/loot_table/blocks/deepslate_vermidium_ore.json
+0dad92ec5ad712255ff33fafe3138cccd8931d03 data/testmod/loot_table/blocks/vermidium_ore.json
