@@ -10,6 +10,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -22,15 +23,16 @@ public class ModConfiguredFeatures {
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
-        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
+        //RuleTest stoneReplaceables = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        List<OreConfiguration.TargetBlockState> overworldVermidiumOres = List.of(
-                OreConfiguration.target(stoneReplaceables, ModBlocks.VERMIDIUM_ORE.get().defaultBlockState()));
+        //List<OreConfiguration.TargetBlockState> overworldVermidiumOres = List.of(
+        //        OreConfiguration.target(stoneReplaceables, ModBlocks.VERMIDIUM_ORE.get().defaultBlockState()));
         List<OreConfiguration.TargetBlockState> overworldDeepslateVermidiumOres = List.of(
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_VERMIDIUM_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_VERMIDIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVermidiumOres, 2));
+        register(context, OVERWORLD_VERMIDIUM_ORE_KEY, new constantSizeOreFeature(NoneFeatureConfiguration.CODEC,
+                ModBlocks.VERMIDIUM_ORE.get()), NoneFeatureConfiguration.INSTANCE);
         register(context, OVERWORLD_DEEPSLATE_VERMIDIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateVermidiumOres, 5));
     }
 

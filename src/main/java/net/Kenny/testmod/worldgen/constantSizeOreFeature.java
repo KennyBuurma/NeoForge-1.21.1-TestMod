@@ -8,11 +8,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
 public class constantSizeOreFeature extends Feature<NoneFeatureConfiguration> {
-
     private final Block oreBlock;
 
     public constantSizeOreFeature(Codec<NoneFeatureConfiguration> codec, Block oreBlock) {
@@ -26,18 +25,15 @@ public class constantSizeOreFeature extends Feature<NoneFeatureConfiguration> {
         BlockPos origin = context.origin();
         RandomSource random = context.random();
 
-        int blocksToPlace = 1 + random.nextInt(2); // generates 1-2 blocks
+        int blocksToPlace = 1 + random.nextInt(2); // 1–2 blocks per vein
         int placed = 0;
 
+        // Random offsets of -1, 0, or 1 from origin
         for (int i = 0; i < blocksToPlace; i++) {
-            // random offset within a 1-block radius cube
-            BlockPos pos = origin.offset(
-                    random.nextInt(3) - 1,
+            BlockPos pos = origin.offset(random.nextInt(3) - 1,
                     random.nextInt(3) - 1,
                     random.nextInt(3) - 1);
             BlockState state = world.getBlockState(pos);
-
-            // only place if block is replaceable stone
             if (state.is(BlockTags.STONE_ORE_REPLACEABLES)) {
                 world.setBlock(pos, oreBlock.defaultBlockState(), 3);
                 placed++;
