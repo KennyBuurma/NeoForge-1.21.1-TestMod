@@ -1,7 +1,7 @@
-// 1.21.1	2026-02-08T16:16:48.2245383	Registries
+// 1.21.1	2026-02-09T15:51:22.7173435	Registries
 6faaf9f325615fa658f138e57e6266fec2471b8b data/testmod/neoforge/biome_modifier/add_deepslate_vermidium_ore.json
 f966767f61cad5dc7afc7f407eef6c4c819de07e data/testmod/neoforge/biome_modifier/add_vermidium_ore.json
 9d1759d0f1d2964e747f72c22f0f3235d088f5d7 data/testmod/worldgen/configured_feature/deepslate_vermidium_ore.json
-5d0a999669fe6e038af5432e8cb2dcc8035ed3ad data/testmod/worldgen/configured_feature/vermidium_ore.json
-97e0188b9da3c9652658fc64f6442f6cc7a523e2 data/testmod/worldgen/placed_feature/vermidium_ore_placed_lapis_like.json
-799cb7c2654c2920f8cbb06510aa4dd5c2e3fa50 data/testmod/worldgen/placed_feature/vermidium_ore_placed_redstone_like.json
+084809d810faf5437d1f948ae1ca473dfed1080f data/testmod/worldgen/configured_feature/vermidium_ore.json
+3e18c61da7c96f489a595a2b153c011c2edbf94d data/testmod/worldgen/placed_feature/vermidium_ore_placed_lapis_like.json
+6949b62d67dff103c6440e765a77fd6b919d3f46 data/testmod/worldgen/placed_feature/vermidium_ore_placed_redstone_like.json
