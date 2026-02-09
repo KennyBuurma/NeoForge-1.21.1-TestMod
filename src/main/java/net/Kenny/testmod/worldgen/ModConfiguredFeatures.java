@@ -2,6 +2,7 @@ package net.Kenny.testmod.worldgen;
 
 import net.Kenny.testmod.TestMod;
 import net.Kenny.testmod.block.ModBlocks;
+import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
@@ -31,8 +32,7 @@ public class ModConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> overworldDeepslateVermidiumOres = List.of(
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_VERMIDIUM_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_VERMIDIUM_ORE_KEY, new constantSizeOreFeature(NoneFeatureConfiguration.CODEC,
-                ModBlocks.VERMIDIUM_ORE.get()), NoneFeatureConfiguration.INSTANCE);
+        register(context, OVERWORLD_VERMIDIUM_ORE_KEY, ModFeatures.TINY_VEIN_VERMIDIUM_ORE_FEATURE, NoneFeatureConfiguration.INSTANCE);
         register(context, OVERWORLD_DEEPSLATE_VERMIDIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateVermidiumOres, 5));
     }
 
