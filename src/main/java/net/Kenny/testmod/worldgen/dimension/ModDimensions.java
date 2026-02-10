@@ -3,7 +3,6 @@ package net.Kenny.testmod.worldgen.dimension;
 import com.mojang.datafixers.util.Pair;
 import net.Kenny.testmod.TestMod;
 import net.Kenny.testmod.worldgen.biome.ModBiomes;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -13,7 +12,6 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.biome.*;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
@@ -55,26 +53,9 @@ public class ModDimensions {
         HolderGetter<DimensionType> dimTypes = context.lookup(Registries.DIMENSION_TYPE);
         HolderGetter<NoiseGeneratorSettings> noiseGenSettings = context.lookup(Registries.NOISE_SETTINGS);
 
-        //NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
-        //        new FixedBiomeSource(biomeRegistry.getOrThrow(Biomes.CRIMSON_FOREST)),
-        //        noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
-
-        NoiseGeneratorSettings baseSettings = noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED).value();
-        NoiseGeneratorSettings customSettings = new NoiseGeneratorSettings(
-                baseSettings.noiseSettings(),
-                Blocks.DEEPSLATE.defaultBlockState(),
-                baseSettings.defaultFluid(),
-                baseSettings.noiseRouter(),
-                baseSettings.surfaceRule(),
-                baseSettings.spawnTarget(),
-                baseSettings.seaLevel(),
-                baseSettings.disableMobGeneration(),
-                baseSettings.aquifersEnabled(),
-                baseSettings.oreVeinsEnabled(),
-                baseSettings.useLegacyRandomSource()
-        );
-
-        Holder<NoiseGeneratorSettings> customSettingsHolder = Holder.direct(customSettings);
+        NoiseBasedChunkGenerator wrappedChunkGenerator = new NoiseBasedChunkGenerator(
+                new FixedBiomeSource(biomeRegistry.getOrThrow(ModBiomes.CUSTOM_BIOME)),
+                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
 
         NoiseBasedChunkGenerator noiseBasedChunkGenerator = new NoiseBasedChunkGenerator(
                 MultiNoiseBiomeSource.createFromList(
@@ -88,8 +69,7 @@ public class ModDimensions {
                                         Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.DARK_FOREST))
 
                         ))),
-                customSettingsHolder
-        );
+                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.DIM_TYPE), noiseBasedChunkGenerator);
 
