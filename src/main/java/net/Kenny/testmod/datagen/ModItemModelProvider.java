@@ -20,5 +20,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.STARLIGHT_ASHES.get());
         basicItem(ModItems.FROSTFIRE_ICE.get());
         basicItem(ModItems.CHISEL.get());
+
+        basicItem(ModItems.RAW_VERMIDIUM.get());
     }
 }
