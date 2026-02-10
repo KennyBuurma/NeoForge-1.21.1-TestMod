@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.VERMIDIUM_ORE);
                         output.accept(ModBlocks.DEEPSLATE_VERMIDIUM_ORE);
+                        output.accept(ModBlocks.MOD_PORTAL);
                     }).build());
 
 

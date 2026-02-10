@@ -2,11 +2,13 @@ package net.Kenny.testmod.block;
 
 import net.Kenny.testmod.TestMod;
 import net.Kenny.testmod.block.custom.MagicBlock;
+import net.Kenny.testmod.block.custom.ModPortalBlock;
 import net.Kenny.testmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -40,6 +42,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DEEPSLATE_VERMIDIUM_ORE = registerBlock("deepslate_vermidium_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 8),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final DeferredBlock<Block> MOD_PORTAL = registerBlock("mod_portal",
+            () -> new ModPortalBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).noLootTable().noOcclusion()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

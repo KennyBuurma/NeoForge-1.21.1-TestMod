@@ -1,4 +1,4 @@
-package net.Kenny.testmod.worldgen;
+/*package net.Kenny.testmod.worldgen;
 
 import net.Kenny.testmod.TestMod;
 import net.Kenny.testmod.block.ModBlocks;
@@ -11,8 +11,8 @@ import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConf
 
 public class ModFeatures {
 
-    public static final constantSizeOreFeature TINY_VEIN_VERMIDIUM_ORE_FEATURE =
-            new constantSizeOreFeature(NoneFeatureConfiguration.CODEC, ModBlocks.VERMIDIUM_ORE.get());
+    public static final ConstantSizeOreFeature TINY_VEIN_VERMIDIUM_ORE_FEATURE =
+            new ConstantSizeOreFeature(NoneFeatureConfiguration.CODEC, ModBlocks.VERMIDIUM_ORE.get());
 
     // ResourceKey for the TinyOreFeature
     public static final ResourceKey<Feature<?>> TINY_VEIN_VERMIDIUM_ORE_KEY =
@@ -23,3 +23,5 @@ public class ModFeatures {
         context.register(TINY_VEIN_VERMIDIUM_ORE_KEY, TINY_VEIN_VERMIDIUM_ORE_FEATURE);
     }
 }
+
+ */

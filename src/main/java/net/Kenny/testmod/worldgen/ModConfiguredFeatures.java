@@ -23,16 +23,23 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_DEEPSLATE_VERMIDIUM_ORE_KEY = registerKey("deepslate_vermidium_ore");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
+        var featureLookup = context.lookup(Registries.FEATURE);
 
-        //RuleTest stoneReplaceables = new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD);
+        /*@SuppressWarnings("unchecked")
+        Holder<Feature<NoneFeatureConfiguration>> tinyVermidium =
+                (Holder<Feature<NoneFeatureConfiguration>>) (Holder<?>) featureLookup.getOrThrow(ModFeatures.TINY_VEIN_VERMIDIUM_ORE_KEY);
+
+         */
+
+        RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-        //List<OreConfiguration.TargetBlockState> overworldVermidiumOres = List.of(
-        //        OreConfiguration.target(stoneReplaceables, ModBlocks.VERMIDIUM_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldVermidiumOres = List.of(
+                OreConfiguration.target(stoneReplaceables, ModBlocks.VERMIDIUM_ORE.get().defaultBlockState()));
         List<OreConfiguration.TargetBlockState> overworldDeepslateVermidiumOres = List.of(
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.DEEPSLATE_VERMIDIUM_ORE.get().defaultBlockState()));
 
-        register(context, OVERWORLD_VERMIDIUM_ORE_KEY, ModFeatures.TINY_VEIN_VERMIDIUM_ORE_FEATURE, NoneFeatureConfiguration.INSTANCE);
+        register(context, OVERWORLD_VERMIDIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldVermidiumOres, 3));
         register(context, OVERWORLD_DEEPSLATE_VERMIDIUM_ORE_KEY, Feature.ORE, new OreConfiguration(overworldDeepslateVermidiumOres, 5));
     }
 

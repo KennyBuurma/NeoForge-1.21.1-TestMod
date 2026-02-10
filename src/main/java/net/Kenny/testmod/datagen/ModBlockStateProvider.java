@@ -23,6 +23,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_VERMIDIUM_ORE);
 
         blockWithItem(ModBlocks.MAGIC_BLOCK);
+
+        blockWithItem(ModBlocks.MOD_PORTAL);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

@@ -23,7 +23,7 @@ public class ModPlacedFeatures {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, VERMIDIUM_ORE_PLACED_KEY_LAPIS_LIKE, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_VERMIDIUM_ORE_KEY),
-                ModOrePlacement.commonOrePlacement(200, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(28), VerticalAnchor.absolute(64))));
+                ModOrePlacement.commonOrePlacement(20, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(28), VerticalAnchor.absolute(64))));
         register(context, VERMIDIUM_ORE_PLACED_KEY_REDSTONE_LIKE, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_DEEPSLATE_VERMIDIUM_ORE_KEY),
                 ModOrePlacement.commonOrePlacement(8, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-16), VerticalAnchor.aboveBottom(32))));
     }
