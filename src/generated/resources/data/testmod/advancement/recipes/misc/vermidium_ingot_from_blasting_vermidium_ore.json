@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "testmod:vermidium_ingot_from_blasting_vermidium_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vermidium_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "testmod:vermidium_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vermidium_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "testmod:vermidium_ingot_from_blasting_vermidium_ore"
+    ]
+  }
+}

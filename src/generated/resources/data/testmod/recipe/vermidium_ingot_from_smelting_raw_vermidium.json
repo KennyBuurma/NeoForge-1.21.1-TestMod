@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "vermidium",
+  "ingredient": {
+    "item": "testmod:raw_vermidium"
+  },
+  "result": {
+    "count": 1,
+    "id": "testmod:vermidium_ingot"
+  }
+}

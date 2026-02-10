@@ -22,6 +22,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     protected void buildRecipes(RecipeOutput recipeOutput) {
         List<ItemLike> BISMUTH_SMELTABLES = List.of(ModItems.RAW_BISMUTH,
                 ModBlocks.BISMUTH_ORE, ModBlocks.BISMUTH_DEEPSLATE_ORE);
+        List<ItemLike> VERMIDIUM_SMELTABLES = List.of(ModItems.RAW_VERMIDIUM,
+                ModBlocks.VERMIDIUM_ORE, ModBlocks.DEEPSLATE_VERMIDIUM_ORE);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.BISMUTH_BLOCK.get())
                 .pattern("BBB")
@@ -41,6 +43,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         oreSmelting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f, 200, "bismuth");
         oreBlasting(recipeOutput, BISMUTH_SMELTABLES, RecipeCategory.MISC, ModItems.BISMUTH.get(), 0.25f, 100, "bismuth");
+        oreSmelting(recipeOutput, VERMIDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VERMIDIUM_INGOT.get(), 0.25f, 200, "vermidium");
+        oreBlasting(recipeOutput, VERMIDIUM_SMELTABLES, RecipeCategory.MISC, ModItems.VERMIDIUM_INGOT.get(), 0.25f, 100, "vermidium");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

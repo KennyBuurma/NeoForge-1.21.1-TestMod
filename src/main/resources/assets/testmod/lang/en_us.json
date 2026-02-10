@@ -15,6 +15,9 @@
   "block.testmod.vermidium_ore": "Vermidium Ore",
   "block.testmod.deepslate_vermidium_ore": "Deepslate Vermidium Ore",
 
+  "item.testmod.raw_vermidium": "Raw Vermidium",
+  "item.testmod.vermidium_ingot": "Vermidium Ingot",
+
   "block.testmod.magic_block": "Magic Block",
 
   "block.testmod.mod_portal": "Portal Block",

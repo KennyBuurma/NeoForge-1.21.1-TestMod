@@ -22,5 +22,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.CHISEL.get());
 
         basicItem(ModItems.RAW_VERMIDIUM.get());
+        basicItem(ModItems.VERMIDIUM_INGOT.get());
     }
 }

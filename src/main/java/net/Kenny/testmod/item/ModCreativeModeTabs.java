@@ -51,6 +51,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DEEPSLATE_VERMIDIUM_ORE);
                         output.accept(ModBlocks.MOD_PORTAL);
                         output.accept(ModItems.RAW_VERMIDIUM);
+                        output.accept(ModItems.VERMIDIUM_INGOT);
                     }).build());
 
 

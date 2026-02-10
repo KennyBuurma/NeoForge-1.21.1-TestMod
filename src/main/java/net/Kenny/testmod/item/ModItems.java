@@ -40,6 +40,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> RAW_VERMIDIUM = ITEMS.register("raw_vermidium",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> VERMIDIUM_INGOT = ITEMS.register("vermidium_ingot",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
