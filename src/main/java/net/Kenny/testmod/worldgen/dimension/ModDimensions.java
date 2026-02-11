@@ -69,7 +69,7 @@ public class ModDimensions {
                                         Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.DARK_FOREST))
 
                         ))),
-                noiseGenSettings.getOrThrow(NoiseGeneratorSettings.AMPLIFIED));
+                noiseGenSettings.getOrThrow(ModBiomes.CUSTOM_NOISE));
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.DIM_TYPE), noiseBasedChunkGenerator);
 

@@ -5,16 +5,23 @@ import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
 import net.minecraft.data.worldgen.BootstrapContext;
+import net.minecraft.data.worldgen.SurfaceRuleData;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.*;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.*;
 import net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+
+import java.util.List;
 
 public class ModBiomes {
     public static final ResourceKey<Biome> CUSTOM_BIOME = ResourceKey.create(
             Registries.BIOME, ResourceLocation.fromNamespaceAndPath(TestMod.MOD_ID, "custom_biome")
     );
+    public static final ResourceKey<NoiseGeneratorSettings> CUSTOM_NOISE = ResourceKey.create(
+            Registries.NOISE_SETTINGS, ResourceLocation.fromNamespaceAndPath(TestMod.MOD_ID, "custom_biome"));
 
     public static void bootstrap(BootstrapContext<Biome> context) {
         HolderGetter<PlacedFeature> holdergetter = context.lookup(Registries.PLACED_FEATURE);
@@ -43,5 +50,32 @@ public class ModBiomes {
                 .build();
 
         context.register(CUSTOM_BIOME, biome);
+    }
+
+    protected static final NoiseSettings CUSTOM_NOISE_SETTINGS = net.minecraft.world.level.levelgen.NoiseSettings
+            .create(0, 128, 2, 1);
+
+    protected static NoiseRouter none() {
+        return new NoiseRouter(DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero(), DensityFunctions.zero());
+    }
+
+    public static NoiseGeneratorSettings custom(BootstrapContext<?> context) {
+        return new NoiseGeneratorSettings(
+                CUSTOM_NOISE_SETTINGS,
+                Blocks.DEEPSLATE.defaultBlockState(),
+                Blocks.AIR.defaultBlockState(),
+                none(),
+                SurfaceRuleData.overworld(),
+                List.of(),
+                0,
+                true,
+                false,
+                false,
+                true
+        );
+    }
+
+    public static void bootstrapNoise(BootstrapContext<NoiseGeneratorSettings> context) {
+        context.register(CUSTOM_NOISE, custom(context));
     }
 }
