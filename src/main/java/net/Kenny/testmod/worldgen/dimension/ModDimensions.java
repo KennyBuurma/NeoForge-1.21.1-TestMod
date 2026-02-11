@@ -3,6 +3,7 @@ package net.Kenny.testmod.worldgen.dimension;
 import com.mojang.datafixers.util.Pair;
 import net.Kenny.testmod.TestMod;
 import net.Kenny.testmod.worldgen.biome.ModBiomes;
+import net.Kenny.testmod.worldgen.biome.Noise;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -69,7 +70,7 @@ public class ModDimensions {
                                         Climate.parameters(0.4F, 0.3F, 0.2F, 0.1F, 0.0F, 0.0F, 0.0F), biomeRegistry.getOrThrow(Biomes.DARK_FOREST))
 
                         ))),
-                noiseGenSettings.getOrThrow(ModBiomes.CUSTOM_NOISE));
+                noiseGenSettings.getOrThrow(Noise.CUSTOM_NOISE));
 
         LevelStem stem = new LevelStem(dimTypes.getOrThrow(ModDimensions.DIM_TYPE), noiseBasedChunkGenerator);
 
