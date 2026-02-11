@@ -6,6 +6,7 @@ import net.Kenny.testmod.item.custom.FuelItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -42,6 +43,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> VERMIDIUM_INGOT = ITEMS.register("vermidium_ingot",
             () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> REFINED_VERMIDIUM_PICKAXE_LAPIS = ITEMS.register("refined_vermidium_pickaxe_lapis",
+            () -> new PickaxeItem(ModToolTiers.VERMIDIUM, new Item.Properties()
+                    .attributes(PickaxeItem.createAttributes(ModToolTiers.VERMIDIUM, 2F, -2.4F))));
 
 
     public static void register(IEventBus eventBus) {

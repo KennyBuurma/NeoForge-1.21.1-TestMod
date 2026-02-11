@@ -1,9 +1,10 @@
-// 1.21.1	2026-02-10T18:30:47.1524009	Item Models: testmod
+// 1.21.1	2026-02-11T18:59:51.4236473	Item Models: testmod
 c8a61ab9d27d34dc4c074bad57e525de2c80762d assets/testmod/models/item/bismuth.json
 6327b4efe0a4bb6b97bbfa1c9874caf1d5de3343 assets/testmod/models/item/chisel.json
 b1b77c87db2bd012d2fe67607345096569f5eeb8 assets/testmod/models/item/frostfire_ice.json
 162e0c503d1dde6f3c2164585c940bc2cb0d7003 assets/testmod/models/item/radish.json
 29629a521ca4fc22b3dd518a1712d18bc55a2a2f assets/testmod/models/item/raw_bismuth.json
 6a2238dc7d7b4dcf2acad67bd0df16eb6bfe4956 assets/testmod/models/item/raw_vermidium.json
+f91c2c5de6d27289b94c5f66732f65f9e00b9c1a assets/testmod/models/item/refined_vermidium_pickaxe_lapis.json
 d5de02c33b7e2779c85da978a41899c0d8ae15e5 assets/testmod/models/item/starlight_ashes.json
 ff549ffd6ffe46b74aa69592e97d8bfb9492c5e8 assets/testmod/models/item/vermidium_ingot.json

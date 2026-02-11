@@ -1,3 +1,5 @@
-// 1.21.1	2026-02-08T16:16:48.2235387	Tags for minecraft:block mod id testmod
+// 1.21.1	2026-02-11T18:59:51.4216481	Tags for minecraft:block mod id testmod
 f7f78329251efa869afb84254e8bbd98af72416e data/minecraft/tags/block/mineable/pickaxe.json
 012a7a4af7174f56025efd9ddd24e28b5e81087b data/minecraft/tags/block/needs_iron_tool.json
+43be1012d3412b1f0c380ae2344b6645a3989758 data/testmod/tags/block/incorrect_for_refined_vermidium_tool.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data/testmod/tags/block/needs_refined_vermidium_tool.json

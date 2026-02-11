@@ -2,6 +2,7 @@ package net.Kenny.testmod.datagen;
 
 import net.Kenny.testmod.TestMod;
 import net.Kenny.testmod.block.ModBlocks;
+import net.Kenny.testmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -29,6 +30,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BISMUTH_DEEPSLATE_ORE.get())
                 .add(ModBlocks.VERMIDIUM_ORE.get())
                 .add(ModBlocks.DEEPSLATE_VERMIDIUM_ORE.get());
+
+        tag(ModTags.Blocks.NEEDS_REFINED_VERMIDIUM_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_REFINED_VERMIDIUM_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_REFINED_VERMIDIUM_TOOL);
 
     }
 }

@@ -52,6 +52,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.MOD_PORTAL);
                         output.accept(ModItems.RAW_VERMIDIUM);
                         output.accept(ModItems.VERMIDIUM_INGOT);
+                        output.accept(ModItems.REFINED_VERMIDIUM_PICKAXE_LAPIS);
                     }).build());
 
 
